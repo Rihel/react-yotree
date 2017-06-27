@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --colors --inline --hot"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",

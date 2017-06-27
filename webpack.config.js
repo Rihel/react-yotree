@@ -32,6 +32,7 @@ function getEnter(root) {
 }
 
 let config = {
+    devtool:'source-map',
     resolve: {
         extensions: ['.js', '.scss'],
     },
@@ -62,8 +63,8 @@ let config = {
                             loader: 'css-loader',
                             options: {
                                 importLoaders: 1,
-                                modules: true,
-                                localIdentName: '[name]-[local]-[hash:base64:5]'
+                                // modules: true,
+                                // localIdentName: '[name]-[local]-[hash:base64:5]'
                             }
                         },
                         {
@@ -99,7 +100,7 @@ let config = {
     plugins: getEnter(PAGE_PATH).html.concat([
 
         new Ex('style.css'),
-
+        new Browser(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
             filename: 'js/[name].js',

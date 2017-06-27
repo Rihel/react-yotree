@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom'; 
-class Hello extends Component {
+
+import Header from '../../components/header/header.jsx'
+import '../../scss/common'
+
+
+class Index extends Component {
     render() {
         return (
             <div>
-                首页
+                <Header></Header>
             </div>
         );
     }
 }
 
-render(<Hello/>,document.getElementById('root'))
+render(<Index/>,document.getElementById('root'))
